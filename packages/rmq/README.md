@@ -24,6 +24,7 @@ uv run rmq --help
 | `rmq create-exchange` | Create a durable exchange. |
 | `rmq dump-dlq` | Read a queue (e.g. a DLQ) in batches to JSONL without acking. |
 | `rmq purge-dlq` | Drop DLQ messages that originated from a given source queue. |
+| `rmq publish-dump` | Publish messages from a dump-dlq JSONL file to a broker with a fixed routing key. |
 | `rmq helper` | Minimal RabbitMQ CLI for local dev (subcommands below). |
 
 ### `rmq helper` subcommands

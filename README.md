@@ -31,6 +31,7 @@ uv run rmq --help
 | `rmq create-exchange` | Declare a durable exchange. |
 | `rmq dump-dlq` | Read a queue (e.g. a DLQ) in batches to JSONL. Leaves the queue untouched by default; `--replay` republishes each message to the queue it was dead-lettered from and removes it from the DLQ. |
 | `rmq purge-dlq` | Drop DLQ messages whose `x-death` header names a given source queue. Defaults to `--dry-run`; pass `--apply` to actually delete. |
+| `rmq publish-dump` | Publish messages from a `dump-dlq` JSONL file to a broker/exchange, all under one fixed routing key. Defaults to `--dry-run`; pass `--send` to actually publish. |
 | `rmq helper` | Local-dev helpers (subcommands below). |
 
 `rmq helper` subcommands:
