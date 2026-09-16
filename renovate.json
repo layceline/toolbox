@@ -1,0 +1,15 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": ["config:recommended"],
+  "assignees": ["layceline"],
+  "packageRules": [
+    {
+      "matchUpdateTypes": ["patch", "minor"],
+      "automerge": true
+    },
+    {
+      "matchUpdateTypes": ["major"],
+      "automerge": false
+    }
+  ]
+}
