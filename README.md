@@ -17,6 +17,16 @@ That installs the workspace packages (`packages/rmq`, `packages/authpy`) into `.
 and puts the `rmq` and `authpy` entry points on the path. Prefix commands with
 `uv run`, or activate the venv (`source .venv/bin/activate`) and call them directly.
 
+To get the `rmq`/`authpy` commands on your `PATH` globally (no `uv run`, no venv
+activation), install each package as a `uv` tool with `-e`. That links the tool
+environment straight to this checkout, so `git pull` is enough to pick up changes —
+no reinstall needed:
+
+```sh
+uv tool install -e ./packages/rmq
+uv tool install -e ./packages/authpy
+```
+
 ## CLIs
 
 ### `rmq` — RabbitMQ inspection and maintenance
